@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:500|Lora:700');
+@import url('font-awesome.min.css');
+
+/* Couleurs */
+
+@darkgrey: #222222;
+@pink: #fec6bd;
+@grey: #b0b0b0;
+@white: #ffffff;
+@lightgrey: #faf6f5;
+@darkpink: #cca99d;
+
+/* General */
+
+body, html {margin: 0; padding: 0;width: 100%; font-family: 'Barlow', sans-serif; font-size: 100%;overflow-x: hidden;color:@grey; }
+
+* { box-sizing: border-box; }
+a, a:hover {text-decoration: none; color: inherit;}
+h1, h2, h3, h4 {font-family: 'Lora', serif; color: @pink;}
+ul, li {display: inline-block;margin:0; padding:0;}
+img {width: 100%;height: auto;}
+i { font-family: 'FontAwesome';}
+h1 {font-size: 1.5em;}
+h2 {font-size: 1.3em;}
+h3 {font-size: 1.2em;}
+fieldset {border:none; outline:0px;padding:0; margin:0;}
+.nopadding {padding:0 !important;}
+
+/* Header */
+
+#header {
+	text-align:center;
+	color: @darkgrey;
+	i { color: @grey; padding:5px;}
+}
+
+#headermobile {
+	background: @pink;
+	color:white;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index:100;
+	left:0;
+	top:0;
+	display: none;
+	i {color: @darkpink;padding: 20px;font-size: 1.2em;}
+	li, a {display:block; width: 100%; padding-bottom: 10px; font-size: 1.3em; line-height: 1em;}
+}
+
+/* Main */
+
+main {
+	line-height: 1.2em;
+	hr{width: 100%;height:2px;}
+	h3:nth-child(2){background:red;}
+	#aprouve {
+		hr {width: 100%;}
+	}
+	.encours {background: @pink; color: @white;border:1px solid @darkpink;display:none;}
+}
+
+#jungle header {
+	padding-top: 100px;padding-bottom: 100px;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	color: @white;
+	h2, p {color: @white;text-shadow: 0px 0px 10px @darkgrey;}
+
+	a {background: @white; color: black; padding: 10px 20px;font-size:0.8em;letter-spacing: 0.1em;text-transform: uppercase;}
+}
+
+.grid-sizer, .grid-item { width: 100%; padding: 0px 0px 30px 0px;}
+
+/* Footer */
+
+#footer {
+	background: @lightgrey;
+	color: @darkgrey;
+	ul, li {display: block;}
+	h3, h4 {color: @darkgrey;}
+	h4 {font-size: 1.1em;}
+	input[type="text"], input[type="email"] {outline: none; background: fff ; color: @grey; background: white; display:block; padding: 8px 10px; border: 1px solid @grey;}
+	input[type="submit"] {background: none; border-radius: 0px; border: 2px solid @darkpink;color: @darkpink; padding: 10px 20px;outline:none;}
+	.error {background: @pink; color: @white;border:1px solid @darkpink;display:none;}
+}
+
+#chat {
+	position: fixed;
+	bottom:0px;
+	right: 10px;
+	width:200px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: bottom 0.5s;
+	background: @pink;
+	border: 1px solid @grey;
+	color: @darkgrey;
+
+	.outside {
+		float:left;
+		width:100%;
+		height: 30px;
+		.icon, p {float:left;height:30px;}
+		.icon {background: @darkpink;}
+	}
+	.inside {display:none;width:100%; color:@grey;line-height: 1em;float:left;border-top:1px solid @grey; background:white;
+		p {margin:0px;}
+	}
+}
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+	h1 {font-size: 2em;}
+	h2 {font-size: 1.8em;}
+	h3 {font-size: 1.5em;}
+	.grid-sizer, .grid-item { width: calc(100%/3);padding: 20px;}
+	#headermobile { display: none !important;}
+	#jungle header a {font-size: 1em;}
+	main hr{width: 150px;}
+
+}
